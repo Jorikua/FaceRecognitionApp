@@ -44,7 +44,9 @@ class Repository(
             true
         )
 
-        return getFacesRects(resizedBitmap)
+        return getFacesRects(resizedBitmap).also {
+            resizedBitmap.recycle()
+        }
     }
 
     private suspend fun getFacesRects(bitmap: Bitmap) =

@@ -21,6 +21,7 @@ class ImageViewWithFaceBox @JvmOverloads constructor(
     init {
         paint.color = Color.RED
         paint.style = Paint.Style.STROKE
+        paint.strokeWidth = 5f
     }
 
     fun setRect(rects: List<Rect>) {
