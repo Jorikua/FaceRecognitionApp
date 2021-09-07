@@ -1,0 +1,86 @@
+ext.deps = [:]
+
+ext.sdk = [
+        compileSdk: 31,
+        minSdk    : 24,
+        targetSdk : 31,
+]
+
+def url = [
+
+]
+
+def versions = [
+        android_gradle_plugin   : '7.1.0-alpha11',
+        appcompat               : '1.3.1',
+        constraint_layout       : '2.1.0',
+        coroutines              : "1.5.1",
+        epoxy                   : '4.6.3-vinay-compose',
+        fragment_ktx            : '1.3.6',
+        koin                    : "3.1.2",
+        kotlin                  : '1.5.21',
+        lifecycle               : '2.4.0-alpha03',
+        material                : '1.4.0',
+        recyclerview            : '1.2.1',
+        moshi                   : '1.12.0',
+        navigation              : '2.3.5',
+        swipe_refresh           : "1.2.0-alpha01",
+        glide                   : '4.11.0',
+        liveEvent               : '1.2.0'
+]
+
+def deps = [
+        android_gradle_plugin  : "com.android.tools.build:gradle:$versions.android_gradle_plugin",
+        appcompat              : "androidx.appcompat:appcompat:$versions.appcompat",
+        material               : "com.google.android.material:material:$versions.material",
+        recyclerview           : "androidx.recyclerview:recyclerview:$versions.recyclerview",
+        constraintlayout       : "androidx.constraintlayout:constraintlayout:$versions.constraint_layout",
+        navigation_plugin      : "androidx.navigation:navigation-safe-args-gradle-plugin:$versions.navigation",
+        fragment_ktx           : "androidx.fragment:fragment-ktx:$versions.fragment_ktx",
+        swipe_refresh          : "androidx.swiperefreshlayout:swiperefreshlayout:$versions.swipe_refresh",
+        databinding            : "androidx.databinding:databinding-compiler:$versions.android_gradle_plugin",
+        liveevent              : "com.github.hadilq.liveevent:liveevent:$versions.liveEvent",
+]
+
+deps.network = [
+        "moshi"        : "com.squareup.moshi:moshi:$versions.moshi",
+        "kaptMoshi"    : "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshi"
+]
+
+deps.lifecycle = [
+        extensions: ["androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle",
+                     "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle"]
+]
+
+deps.coroutines = [
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines",
+]
+deps.kotlin = [
+        stdlib : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin",
+        plugin : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
+        allopen: "org.jetbrains.kotlin:kotlin-allopen:$versions.kotlin"
+]
+
+deps.navigation = [
+        core: ["androidx.navigation:navigation-fragment-ktx:$versions.navigation",
+               "androidx.navigation:navigation-ui-ktx:$versions.navigation"]
+]
+
+deps.epoxy = [
+        core     : ["com.airbnb.android:epoxy:$versions.epoxy",
+                    "com.airbnb.android:epoxy-databinding:$versions.epoxy",
+                    "com.airbnb.android:epoxy-glide-preloading:$versions.epoxy"],
+        processor: "com.airbnb.android:epoxy-processor:$versions.epoxy",
+]
+deps.koin = [
+        core  : ["io.insert-koin:koin-android:$versions.koin"],
+]
+deps.glide = [
+        core    : "com.github.bumptech.glide:glide:$versions.glide",
+        compiler: "com.github.bumptech.glide:compiler:$versions.glide"
+]
+
+ext.deps = deps
+ext.url = url
+ext.versions = versions

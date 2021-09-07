@@ -1,0 +1,15 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+apply from: "$project.rootDir/common_module.gradle"
+
+dependencies {
+    api project(':base')
+
+    implementation deps.network.moshi
+    implementation deps.glide.core
+    implementation 'com.google.mlkit:face-detection:16.1.2'
+    kapt deps.network.kaptMoshi
+}

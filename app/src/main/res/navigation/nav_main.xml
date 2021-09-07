@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.facerecognitionapp.ui.home.HomeFragment"
+        android:label="TrendingFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/toDetailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.facerecognitionapp.ui.details.DetailsFragment"
+        android:label="DetailsFragment" >
+        <argument
+            android:name="imageRes"
+            app:argType="integer" />
+    </fragment>
+</navigation>

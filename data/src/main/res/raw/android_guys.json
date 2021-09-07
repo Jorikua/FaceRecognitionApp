@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Nick Sears",
+        "img": "nick.webp"
+    },
+    {
+        "name": "Android Guy",
+        "img": "android.webp"
+    },
+    {
+        "name": "Larry Page",
+        "img": "larry.webp"
+    },
+    {
+        "name": "Rich Miner",
+        "img": "rich.webp"
+    },
+    {
+        "name": "Sergey Brin",
+        "img": "sergey.webp"
+    },
+    {
+        "name": "Sundar Pichai",
+        "img": "sundar.webp"
+    },
+    {
+        "name": "Andy Rubin",
+        "img": "andy.webp"
+    }
+]
